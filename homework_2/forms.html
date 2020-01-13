@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<head>
+  <title>Forms Homework</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap&subset=latin-ext" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="container">
+  <h1>Pick your favorite Christmas movie!</h1>
+  <form action="https://18z9lalk4f.execute-api.us-east-1.amazonaws.com/dev/email/send" method="POST">
+
+      <!-- Contact details fieldset -->
+    <fieldset>
+      <legend>Contact Details</legend>
+
+      <label for="firstName">First Name: </label>
+      <input class="textInput" type="text" name="firstName" id="firstName" placeholder="First Name">
+
+      <label for="lastName">Last Name: </label>
+      <input class="textInput" type="text" name="lastName" id="lastName" placeholder="Last Name">    
+      
+      <label for="email">Email: </label>
+      <input class="textInput" type="email" name="email" id="email" placeholder="E-mail">     
+      
+      <label for="phone">Phone: </label>
+      <input class="textInput" type="tel" name="phone" id="phone" placeholder="Phone number">           
+    </fieldset>
+
+      <!-- Choose movie -->
+    <fieldset>
+      <legend>Choose a movie</legend>
+
+      <label><input type="radio" name="movie" value="Klaus">Klaus</label>
+      <label><input type="radio" name="movie" value="Polar Express">Polar Express</label>
+      <label><input type="radio" name="movie" value="Grinch">Grinch</label>
+      <label><input type="radio" name="movie" value="A Christmas Story">A Christmas Story</label>
+      <label><input type="radio" name="movie" value="Home Alone">Home Alone</label>
+    </fieldset>  
+
+    <!-- location -->
+    <fieldset>
+      <legend>Choose location</legend>
+
+      <label for="location">Location: </label>
+      <select id="location">
+        <option value="" disabled selected name="location">Choose your cinema</option>    
+        <option value="Cinema City Iulius" name="location">Cinema City - Iulius</option>
+        <option value="Cinema City Polus" name="location">Cinema City Polus</option>
+      </select>
+    </fieldset>
+
+    <!-- Terms and conditions -->
+    <fieldset>
+      <legend>Terms and conditions</legend>
+
+      <label for="acceptTerms"><input type="checkbox" id="acceptTerms" name="acceptTerms" values="Terms and conditions accepted">By submitting this form, you accept our terms and conditions.</label>
+    </fieldset>
+
+    <button type="submit">Buy tickets</button>
+  </form>
+
+</div> 
+</body>
+</html>
