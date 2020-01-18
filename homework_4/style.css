@@ -1,0 +1,44 @@
+body,
+html {
+  width: 100%;
+  height: 100%; 
+  margin: auto 0; /* removes chrome's automatic margins = normalizing css*/
+}
+
+.container {
+  display: flex;
+  height: 100%;
+  flex-flow: row wrap;
+}
+
+.navBar {
+  width: 100%;
+  height: 5%;
+  /* position: fixed; */
+  background-color: #4a5c8a;
+}
+
+.card {
+  height: 90%;
+  align-items: stretch;
+  flex: 1 0 0;
+}
+
+.one {
+  background-color: #4a6345;
+}
+
+.two {
+  background-color: #f2bcac;
+  flex-grow: 3;
+}
+
+.three {
+  background-color: #f5683d;
+}
+
+.footer {
+  width: 100%;
+  height: 5%;
+  background-color: #d6af42;
+}
