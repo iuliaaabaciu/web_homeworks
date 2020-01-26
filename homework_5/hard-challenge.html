@@ -1,0 +1,106 @@
+<html>
+<head>
+  <title>Hard Challenge - Analogue Clock</title>
+  <style>
+    body {
+      margin: 0 auto;
+      background-color: #75a3a3;
+      display: flex;
+      align-items: center;
+      justify-content: center;  
+    }
+
+    .clock {
+      width: 350px;
+      height: 350px;      
+      border-radius: 100%;
+      background: #f0f5f5;   
+    }
+
+    .wrap {
+      overflow: hidden;
+      position: relative;
+      width: 350px;
+      height: 350px;
+      border-radius: 100%;
+    }
+
+    .min,
+    .hour {
+      position: absolute;
+      height: 100px;
+      width: 6px;
+      margin: auto;
+      top: -27%;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background: #ac39ac;
+      transform-origin: bottom center;
+      transform: rotate(0deg);
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+    }
+
+    .min {
+      position: absolute;
+      height: 130px;
+      width: 4px;
+      top: -37%;
+      left: 0px;
+      background-color: 00cc99;
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+      animation: minute 60s linear infinite;
+    }
+
+    .sec {
+      position: absolute;
+      height: 90px;
+      width: 2px;
+      margin: auto;
+      top: -26%;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      border-radius: 4px;
+      background: #FF4B3E;
+      transform-origin: bottom center;
+      animation: second 60s linear infinite;
+    }
+
+    .dot {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 16px;
+      height: 16px;
+      border-radius: 100px;
+      background: #ff80bf;
+      border-radius: 100px;
+      margin: auto;
+      z-index: 1;
+}
+
+    @keyframes second { /* numele animatiei */
+        0%   {transform: none;}
+        100% {transform: rotate(360deg);}
+    }
+
+    @keyframes minute { /* numele animatiei */
+      0%   { transform: none;}
+      100% {transform: rotate(6deg);}
+    }    
+  </style>
+</head>
+<body>
+  <div class="clock">
+    <div class="wrap">
+      <div class="dot"></div>
+      <div class="hour"></div>
+      <div class="min"></div>
+      <div class="sec"></div>
+    </div>
+  </div>
+</body>
+</html>
