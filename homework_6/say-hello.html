@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Say Hello</title>
+</head>
+<body>
+<script>
+	var hours = new Date().getHours();
+	function hello() {
+		if (hours < 12) {
+			return('Good morning!');
+		} else if (hours >= 12 && hours < 18) {
+			return('Good afternoon!');
+		} else {
+			return('Good evening');
+		}
+	}
+	console.log(hello(hours));
+</script>	
+</body>
+</html>
