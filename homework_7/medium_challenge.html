@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Medium challenge</title>
+</head>
+<body>
+	<script>
+		function sumOfGivenNumbers(a, b) {
+			var sum = 0;
+			for(var i = ((a > b) ? b : a); 
+					i <= ((a < b) ? b : a); 
+					i++) {
+				sum = sum + i;
+			}
+			return sum;
+		}
+		console.log(sumOfGivenNumbers(3, 5));
+
+	</script>
+</body>
+</html>
